@@ -26,6 +26,40 @@ private fun PlantWatering(wateringInterval: Int) {
     }
 }
 
+
+
+@Preview
+@Composable
+private fun PlantDetailContentPreview() {
+    val plant = Plant("id", "Apple", "HTML<br><br>description", 3, 30, "")
+    SunflowerTheme {
+        PlantDetailContent(plant)
+    }
+}
+
+@Preview
+@Composable
+private fun PlantNamePreview() {
+    SunflowerTheme {
+        PlantName("Apple")
+    }
+}
+
+@Preview
+@Composable
+private fun PlantWateringPreview() {
+    SunflowerTheme {
+        PlantWatering(7)
+    }
+}
+
+@Preview
+@Composable
+private fun PlantDescriptionPreview() {
+    SunflowerTheme {
+        PlantDescription("HTML<br><br>description")
+    }
+}
 @Preview
 @Composable
 private fun PlantWateringPreview() {
