@@ -25,4 +25,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+
+@Composable
+fun PlantDetailDescription() {
+    Surface {
+        Text("Hello Compose")
+    }  
+}
 </androidx.core.widget.NestedScrollView>
+
+
+
+class PlantDetailFragment : Fragment() {
+    // ...
+    override fun onCreateView(...): View? {
+        val binding = DataBindingUtil.inflate<FragmentPlantDetailBinding>(
+            inflater, R.layout.fragment_plant_detail, container, false
+        ).apply {
+            // ...
+            composeView.setContent {
+                // You're in Compose world!
+                MaterialTheme {
+                    PlantDetailDescription()
+                }
+            }
+        }
+        // ...
+    }
+}
