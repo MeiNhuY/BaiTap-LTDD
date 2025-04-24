@@ -1,0 +1,26 @@
+<TextView
+    android:id="@+id/plant_watering_header"
+    ...
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_normal"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:gravity="center_horizontal"
+    android:text="@string/watering_needs_prefix"
+    android:textColor="?attr/colorAccent"
+    android:textStyle="bold"
+    ... />
+
+<TextView
+    android:id="@+id/plant_watering"
+    ...
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:gravity="center_horizontal"
+    app:wateringText="@{viewModel.plant.wateringInterval}"
+    .../>
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_normal">
